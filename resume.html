@@ -1,0 +1,2120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Андрей Носар — Инженер-технолог УЭЦН, разработчик ПО</title>
+    <meta name="description" content="Резюме и портфолио Андрея Носара: 25 лет в нефтедобыче, инженерные инструменты УЭЦН, ESP AI ANALYZER, подбор оборудования, расчёт режимов." />
+    <meta name="author" content="Андрей Носар" />
+    <link rel="canonical" href="https://tehnologdeveng.github.io/" />
+
+    <meta property="og:title" content="Андрей Носар — Инженер-технолог УЭЦН, разработчик ПО" />
+    <meta property="og:description" content="25 лет опыта, 4 инженерных продукта, ESP AI ANALYZER." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tehnologdeveng.github.io/" />
+    <meta property="og:image" content="https://tehnologdeveng.github.io/preview.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Андрей Носар",
+        "jobTitle": "Ведущий инженер-технолог УЭЦН",
+        "url": "https://tehnologdeveng.github.io/",
+        "knowsAbout": ["УЭЦН", "ESP AI ANALYZER", "Подбор насосного оборудования", "Расчёт режимов скважин", "ТМПН", "Станции управления"],
+        "workExperience": "25 лет"
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg: #0c0f17;
+            --bg-elevated: #131824;
+            --bg-surface: #1a1f2e;
+            --border: rgba(148, 163, 184, 0.08);
+            --border-hover: rgba(148, 163, 184, 0.15);
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-tertiary: #64748b;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --accent-muted: rgba(59, 130, 246, 0.1);
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, Monaco, monospace;
+            --radius: 12px;
+            --radius-sm: 8px;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+            --shadow: 0 4px 24px rgba(0,0,0,0.4);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.5);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+        }
+
+        .page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .site-header {
+            padding: 3rem 0 2.5rem;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 3rem;
+        }
+
+        .header-grid {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .header-label {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--accent);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .header-title {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .header-title span { color: var(--accent); }
+
+        .header-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            line-height: 1.5;
+        }
+
+        .header-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.25rem;
+            flex-wrap: wrap;
+            font-size: 0.875rem;
+            color: var(--text-tertiary);
+        }
+
+        .header-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            background: var(--accent-muted);
+            border: 1px solid rgba(59, 130, 246, 0.15);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--accent-hover);
+            white-space: nowrap;
+        }
+
+        .status-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .section-header { margin-bottom: 1.5rem; }
+        .section-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .section-desc {
+            font-size: 0.9rem;
+            color: var(--text-tertiary);
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .metric {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.25rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .metric:hover { border-color: var(--border-hover); }
+
+        .metric-value {
+            font-family: var(--font-mono);
+            font-size: 1.75rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            line-height: 1;
+            margin-bottom: 0.4rem;
+        }
+
+        .metric-value span { color: var(--accent); }
+
+        .metric-label {
+            font-size: 0.8rem;
+            color: var(--text-tertiary);
+            line-height: 1.4;
+        }
+
+        /* AI Section Styles */
+        .ai-section { margin-bottom: 4.5rem; position: relative; }
+
+        .ai-badge-group {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .ai-badge {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 0.3rem 0.8rem;
+            border-radius: 100px;
+            background: rgba(59, 130, 246, 0.12);
+            color: var(--accent-hover);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .ai-badge-pulse {
+            width: 7px;
+            height: 7px;
+            background: #60a5fa;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #3b82f6;
+            animation: pulse 1.8s infinite;
+        }
+
+        .ai-hero-card {
+            background: linear-gradient(145deg, var(--bg-elevated) 0%, rgba(26, 31, 46, 0.6) 100%);
+            border: 1px solid var(--border-hover);
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2.5rem;
+        }
+
+        .ai-hero-card::before {
+            content: '';
+            position: absolute;
+            top: -120px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(0,0,0,0) 70%);
+            pointer-events: none;
+        }
+
+        .ai-hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .ai-hero-title {
+            font-size: clamp(2rem, 3.5vw, 2.75rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .ai-hero-title span {
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .ai-hero-subtitle {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #cbd5e1;
+            line-height: 1.45;
+            margin-bottom: 1rem;
+        }
+
+        .ai-hero-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+            margin-bottom: 2rem;
+        }
+
+        .ai-hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-status-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.55rem 1.1rem;
+            font-size: 0.85rem;
+            font-family: var(--font-mono);
+            color: var(--warning);
+            background: rgba(245, 158, 11, 0.08);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            border-radius: var(--radius-sm);
+        }
+
+        .ai-mockup-frame {
+            background: #090d16;
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            border-radius: var(--radius);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 35px rgba(59, 130, 246, 0.12);
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .ai-mockup-frame:hover {
+            transform: translateY(-3px) scale(1.01);
+            border-color: rgba(59, 130, 246, 0.4);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 45px rgba(59, 130, 246, 0.25);
+        }
+
+        .ai-mockup-bar {
+            background: #0f1422;
+            padding: 0.6rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .ai-mockup-dots { display: flex; gap: 6px; }
+        .ai-mockup-dots span {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: rgba(148, 163, 184, 0.25);
+        }
+        .ai-mockup-dots span:nth-child(1) { background: #ef4444; }
+        .ai-mockup-dots span:nth-child(2) { background: #f59e0b; }
+        .ai-mockup-dots span:nth-child(3) { background: #22c55e; }
+
+        .ai-mockup-tag {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: var(--text-tertiary);
+        }
+
+        .ai-mockup-img-wrap {
+            position: relative;
+            width: 100%;
+            background: #06080d;
+            aspect-ratio: 16 / 10.5;
+            overflow: hidden;
+        }
+
+        .ai-mockup-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+        }
+
+        .ai-subheading-group { margin-bottom: 1.75rem; }
+        .ai-subheading-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+            margin-bottom: 0.35rem;
+        }
+
+        .ai-subheading-desc {
+            font-size: 0.9rem;
+            color: var(--text-tertiary);
+        }
+
+        .ai-timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .ai-timeline-item {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem 1.25rem;
+            position: relative;
+            transition: all 0.25s ease;
+        }
+
+        .ai-timeline-item:hover {
+            border-color: rgba(59, 130, 246, 0.3);
+            background: var(--bg-surface);
+            transform: translateY(-2px);
+        }
+
+        .ai-timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .ai-step-num {
+            font-family: var(--font-mono);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent);
+            opacity: 0.9;
+        }
+
+        .ai-step-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--text-tertiary);
+        }
+
+        .ai-step-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.4rem;
+        }
+
+        .ai-step-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .ai-features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .ai-feature-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.75rem;
+            display: flex;
+            gap: 1.25rem;
+            transition: all 0.2s ease;
+        }
+
+        .ai-feature-card:hover {
+            border-color: var(--border-hover);
+            background: var(--bg-surface);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .ai-feature-icon-box {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-sm);
+            background: var(--accent-muted);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            color: var(--accent-hover);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .ai-feature-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.4rem;
+        }
+
+        .ai-feature-desc {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+
+        .ai-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .ai-gallery-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ai-gallery-card:hover {
+            border-color: rgba(59, 130, 246, 0.35);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .ai-gallery-thumb {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            background: #090d16;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .ai-gallery-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .ai-gallery-card:hover .ai-gallery-thumb img {
+            transform: scale(1.04);
+        }
+
+        .ai-gallery-overlay-hint {
+            position: absolute;
+            inset: 0;
+            background: rgba(12, 15, 23, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: #fff;
+            font-size: 0.8rem;
+            font-family: var(--font-mono);
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            backdrop-filter: blur(2px);
+        }
+
+        .ai-gallery-card:hover .ai-gallery-overlay-hint { opacity: 1; }
+
+        .ai-gallery-info { padding: 1rem 1.25rem; }
+        .ai-gallery-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .ai-gallery-caption {
+            font-size: 0.8rem;
+            color: var(--text-tertiary);
+        }
+
+        .ai-stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            background: linear-gradient(180deg, var(--bg-elevated) 0%, rgba(19, 24, 36, 0.8) 100%);
+            border: 1px solid var(--border-hover);
+            border-radius: var(--radius);
+            padding: 1.75rem 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .ai-stat-unit {
+            text-align: center;
+            border-right: 1px solid var(--border);
+            padding: 0 0.5rem;
+        }
+
+        .ai-stat-unit:last-child { border-right: none; }
+
+        .ai-stat-number {
+            font-family: var(--font-mono);
+            font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+            font-weight: 700;
+            color: #60a5fa;
+            line-height: 1.1;
+            margin-bottom: 0.35rem;
+        }
+
+        .ai-stat-label {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.35;
+        }
+
+        .ai-cta-card {
+            background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.12) 0%, var(--bg-elevated) 70%);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            border-radius: var(--radius);
+            padding: 2.25rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ai-cta-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.6rem;
+        }
+
+        .ai-cta-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            max-width: 620px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.6;
+        }
+
+        .ai-lightbox-modal .modal {
+            max-width: 1050px;
+            background: #090d16;
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        .ai-lightbox-body { padding: 1rem 1.25rem 1.25rem; }
+        .ai-lightbox-img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            display: block;
+        }
+
+        /* Timeline Styles */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .timeline-item {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            position: relative;
+        }
+        .timeline-item:hover {
+            border-color: rgba(59, 130, 246, 0.3);
+            background: var(--bg-surface);
+        }
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .timeline-period {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+        .timeline-role {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .timeline-company {
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+            white-space: nowrap;
+        }
+        .timeline-details {
+            display: none;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        .timeline-item.active .timeline-details {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+        .timeline-details ul {
+            margin: 0;
+            padding-left: 1.2rem;
+        }
+        .timeline-details li {
+            margin-bottom: 0.35rem;
+            line-height: 1.5;
+        }
+        .timeline-item::after {
+            content: '+';
+            position: absolute;
+            right: 1.25rem;
+            top: 1.25rem;
+            font-family: var(--font-mono);
+            font-size: 1.5rem;
+            color: var(--text-tertiary);
+            transition: transform 0.2s ease;
+        }
+        .timeline-item.active::after {
+            content: '−';
+            color: var(--accent);
+        }
+        @media (max-width: 600px) {
+            .timeline-header {
+                flex-direction: column;
+            }
+            .timeline-company {
+                white-space: normal;
+            }
+            .timeline-item::after {
+                top: 1rem;
+                right: 1rem;
+            }
+        }
+
+        /* Main Grid & Sidebar */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .project {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .project::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: var(--accent);
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .project:hover {
+            border-color: var(--border-hover);
+            background: var(--bg-surface);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow);
+        }
+
+        .project:hover::before { opacity: 1; }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-title-group { flex: 1; }
+
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.15rem;
+        }
+
+        .project-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+        }
+
+        .project-status {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.2rem 0.6rem;
+            border-radius: 100px;
+            background: rgba(34, 197, 94, 0.1);
+            color: var(--success);
+            border: 1px solid rgba(34, 197, 94, 0.15);
+            white-space: nowrap;
+        }
+
+        .project-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .project-features {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.35rem 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .project-features li {
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .project-features li::before {
+            content: '—';
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .project-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1rem;
+            background: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .project-link:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+        }
+
+        .project-link::after {
+            content: '→';
+            transition: transform 0.2s ease;
+        }
+
+        .project-link:hover::after { transform: translateX(2px); }
+
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            background: rgba(148, 163, 184, 0.06);
+            padding: 0.2rem 0.6rem;
+            border-radius: 100px;
+            border: 1px solid var(--border);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .sidebar-block {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.25rem;
+        }
+
+        .sidebar-block h3 {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            margin-bottom: 0.75rem;
+        }
+
+        .author-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.15rem;
+        }
+
+        .author-role {
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+
+        .author-bio {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .expertise-list { list-style: none; }
+        .expertise-list li {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            padding: 0.35rem 0;
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .expertise-list li:last-child { border-bottom: none; }
+        .expertise-list li::before {
+            content: '▸';
+            color: var(--accent);
+            font-size: 0.75rem;
+        }
+
+        .tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .tech-tag {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            background: rgba(148, 163, 184, 0.06);
+            padding: 0.25rem 0.7rem;
+            border-radius: 100px;
+            border: 1px solid var(--border);
+            transition: all 0.2s ease;
+        }
+
+        .tech-tag:hover {
+            border-color: var(--accent);
+            color: var(--accent-hover);
+            background: var(--accent-muted);
+        }
+
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.85rem;
+        }
+
+        .contact-item a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        .contact-item a:hover {
+            color: var(--text-primary);
+            border-bottom-color: var(--accent);
+        }
+
+        .contact-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            color: var(--text-tertiary);
+            flex-shrink: 0;
+        }
+
+        .site-footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.8rem;
+            color: var(--text-tertiary);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-tertiary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover { color: var(--text-primary); }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.25s ease;
+            padding: 1.5rem;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-hover);
+            border-radius: var(--radius);
+            max-width: 700px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(8px);
+            transition: transform 0.25s ease;
+        }
+
+        .modal-overlay.active .modal { transform: translateY(0); }
+
+        .modal-header {
+            padding: 1.5rem 1.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .modal-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--text-tertiary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.25rem;
+            line-height: 1;
+            transition: color 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .modal-close:hover { color: var(--text-primary); }
+        .modal-body { padding: 1rem 1.5rem 1.5rem; }
+
+        .modal-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .modal-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-features li {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            padding: 0.3rem 0;
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+
+        .modal-features li::before {
+            content: '—';
+            color: var(--accent);
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1rem;
+            background: transparent;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--border-hover);
+            color: var(--text-primary);
+            background: rgba(148, 163, 184, 0.05);
+        }
+
+        .tabs {
+            display: flex;
+            gap: 0;
+            margin: 1rem 0;
+            border-bottom: 1px solid var(--border);
+            padding: 0 1.5rem;
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-tertiary);
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 0.6rem 1rem;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -1px;
+            transition: all 0.2s ease;
+        }
+
+        .tab-btn:hover { color: var(--text-secondary); }
+        .tab-btn.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        .tab-panel {
+            display: none;
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .tab-panel.active {
+            display: block;
+            animation: fadeIn 0.2s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .instruction-content {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        .instruction-content h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 1.25rem 0 0.5rem;
+        }
+
+        .instruction-content h4 {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin: 1rem 0 0.4rem;
+        }
+
+        .instruction-content p { margin-bottom: 0.6rem; }
+        .instruction-content ul, .instruction-content ol {
+            margin-left: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+        .instruction-content li { margin-bottom: 0.25rem; }
+        .instruction-content strong { color: var(--text-primary); font-weight: 600; }
+        .instruction-content table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+            font-family: var(--font-mono);
+            margin: 0.8rem 0 1rem;
+        }
+        .instruction-content th {
+            background: var(--bg-surface);
+            padding: 0.5rem 0.6rem;
+            text-align: left;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border);
+        }
+        .instruction-content td {
+            padding: 0.4rem 0.6rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+        .instruction-content tr:last-child td { border-bottom: none; }
+        .instruction-content tbody tr:hover { background: rgba(59, 130, 246, 0.04); }
+
+        /* Responsive */
+        @media (max-width: 1000px) {
+            .ai-hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .ai-timeline-grid { grid-template-columns: repeat(2, 1fr); }
+            .ai-gallery-grid { grid-template-columns: 1fr; }
+            .ai-stats-bar { grid-template-columns: repeat(2, 1fr); gap: 1.5rem 0.5rem; }
+            .ai-stat-unit:nth-child(2) { border-right: none; }
+            .main-grid { grid-template-columns: 1fr; }
+            .sidebar { order: -1; }
+            .metrics { grid-template-columns: repeat(2, 1fr); }
+            .header-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .page { padding: 0 1rem; }
+            .site-header { padding: 2rem 0 1.5rem; }
+            .metrics { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+            .metric { padding: 1rem; }
+            .metric-value { font-size: 1.4rem; }
+            .ai-hero-card { padding: 1.5rem 1.25rem; }
+            .ai-timeline-grid { grid-template-columns: 1fr; }
+            .ai-features-grid { grid-template-columns: 1fr; }
+            .ai-stats-bar { grid-template-columns: 1fr 1fr; }
+            .ai-feature-card { padding: 1.25rem; }
+            .project-features { grid-template-columns: 1fr; }
+            .project-footer { flex-direction: column; align-items: flex-start; }
+            .tabs { padding: 0 1rem; }
+            .modal-header, .modal-body { padding-left: 1rem; padding-right: 1rem; }
+            .tab-panel { padding: 0 1rem 1rem; }
+            .timeline-header { flex-direction: column; }
+            .timeline-company { white-space: normal; }
+            .timeline-item::after { top: 1rem; right: 1rem; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * { animation: none !important; transition: none !important; }
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+        <div class="header-grid">
+            <div>
+                <div class="header-label">Андрей Носар / Ведущий инженер-технолог УЭЦН</div>
+                <h1 class="header-title">Инженер с <span>25-летним</span> опытом, который создаёт инструменты для отрасли</h1>
+                <p class="header-subtitle">
+                    Руководитель направления по добыче нефти и газа, эксперт по УЭЦН. Разрабатываю веб-приложения 
+                    для подбора оборудования, расчёта режимов и автоматизации анализа фонда.
+                </p>
+                <div class="header-meta">
+                    <span>📍 Ноябрьск</span>
+                    <span>⚡ 25 лет в нефтедобыче</span>
+                    <span>🛠️ 4 инженерных продукта</span>
+                    <span>📞 +7 (912) 427-17-80</span>
+                </div>
+                <div style="margin-top: 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                    <a href="resume.html" class="project-link">Скачать резюме (PDF)</a>
+                    <a href="#experience" class="btn-secondary">Смотреть опыт работы</a>
+                </div>
+            </div>
+            <div style="text-align: right;">
+                <span class="status-badge">Открыт к предложениям</span>
+                <div style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-tertiary);">
+                    Руководитель направления<br>Эксперт по механизированной добыче
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== METRICS ===== -->
+    <div class="metrics">
+        <div class="metric">
+            <div class="metric-value">25<span>+</span></div>
+            <div class="metric-label">лет опыта<br>в нефтедобыче</div>
+        </div>
+        <div class="metric">
+            <div class="metric-value">4</div>
+            <div class="metric-label">Инженерных<br>продукта</div>
+        </div>
+        <div class="metric">
+            <div class="metric-value">12</div>
+            <div class="metric-label">Расчётных<br>модулей</div>
+        </div>
+        <div class="metric">
+            <div class="metric-value">60<span>+</span></div>
+            <div class="metric-label">Моделей насосов<br>в каталоге</div>
+        </div>
+    </div>
+
+    <!-- ===== MAIN GRID: PROJECTS + SIDEBAR (перемещено в начало) ===== -->
+    <div class="main-grid">
+        <section aria-labelledby="projects-heading">
+            <div class="section-header">
+                <h2 id="projects-heading" class="section-title">Инженерные продукты</h2>
+                <p class="section-desc">Инструменты, которые закрывают ежедневные задачи технолога УЭЦН</p>
+            </div>
+
+            <article class="project" data-modal="modal-esp" tabindex="0" role="button">
+                <div class="project-header">
+                    <div class="project-title-group">
+                        <div class="project-title">ESP Selector</div>
+                        <div class="project-subtitle">Интеллектуальный подбор УЭЦН</div>
+                    </div>
+                    <span class="project-status">Активен</span>
+                </div>
+                <p class="project-desc">
+                    Моделирует физику процесса: законы подобия, поправку на вязкость через число Рейнольдса,
+                    энергетический баланс и температурную совместимость. Подбирает не просто насос,
+                    а сбалансированную установку: насос + ПЭД + гидрозащита + газосепаратор.
+                </p>
+                <ul class="project-features">
+                    <li>Комплексный подбор всей установки</li>
+                    <li>Интерактивные графики напора, мощности, КПД</li>
+                    <li>Цветовые индикаторы состояния</li>
+                    <li>Экспорт графиков в PNG</li>
+                </ul>
+                <div class="project-footer">
+                    <a href="https://tehnologdeveng.github.io/engineering-module-for-selecting-esp/" target="_blank" rel="noopener noreferrer" class="project-link" onclick="event.stopPropagation()">Открыть инструмент</a>
+                    <div class="project-tags">
+                        <span class="tag">УЭЦН</span>
+                        <span class="tag">Гидродинамика</span>
+                        <span class="tag">Подбор оборудования</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project" data-modal="modal-calc" tabindex="0" role="button">
+                <div class="project-header">
+                    <div class="project-title-group">
+                        <div class="project-title">Инженерный калькулятор УЭЦН</div>
+                        <div class="project-subtitle">12 расчётных модулей для технолога</div>
+                    </div>
+                    <span class="project-status">Активен</span>
+                </div>
+                <p class="project-desc">
+                    Всё, что нужно технологу ежедневно: АПВ/ПКВ, Кпр, давление на приёме,
+                    потери в кабеле, подбор отпайки ТМПН, частотное регулирование,
+                    свободный газ, охлаждение ПЭД, глушение скважины.
+                </p>
+                <ul class="project-features">
+                    <li>12 модулей в одном интерфейсе</li>
+                    <li>Работает с телефона в поле</li>
+                    <li>Выгрузка в PDF и Excel</li>
+                    <li>Автосохранение параметров</li>
+                </ul>
+                <div class="project-footer">
+                    <a href="https://tehnologdeveng.github.io/engineering-calculator/" target="_blank" rel="noopener noreferrer" class="project-link" onclick="event.stopPropagation()">Открыть калькулятор</a>
+                    <div class="project-tags">
+                        <span class="tag">Расчёты</span>
+                        <span class="tag">Технолог</span>
+                        <span class="tag">Автоматизация</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project" data-modal="modal-tmpn" tabindex="0" role="button">
+                <div class="project-header">
+                    <div class="project-title-group">
+                        <div class="project-title">СУ · ТМПН · Отпайка</div>
+                        <div class="project-subtitle">Подбор станции управления и расчёт отпайки</div>
+                    </div>
+                    <span class="project-status">Активен</span>
+                </div>
+                <p class="project-desc">
+                    Вводите ток и напряжение ПЭД — получаете готовую рекомендацию по СУ, ТМПН
+                    и напряжению на всех ступенях отпаек. Автоматический подбор из 40+ моделей
+                    с ранжированием топ-3.
+                </p>
+                <ul class="project-features">
+                    <li>Расчёт всех четырёх ступеней отпаек</li>
+                    <li>Подбор СУ с ранжированием топ-3</li>
+                    <li>Встроенный каталог СУ и ТМПН</li>
+                    <li>Экспорт в PDF с графиками</li>
+                </ul>
+                <div class="project-footer">
+                    <a href="https://tehnologdeveng.github.io/Transformer-Oil-filled-for-Submersible-Pumps/" target="_blank" rel="noopener noreferrer" class="project-link" onclick="event.stopPropagation()">Открыть модуль</a>
+                    <div class="project-tags">
+                        <span class="tag">СУ</span>
+                        <span class="tag">ТМПН</span>
+                        <span class="tag">Отпайка</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <aside class="sidebar" aria-labelledby="about-heading">
+            <div class="sidebar-block" style="text-align: center;">
+                <div style="width: 100px; height: 100px; border-radius: 50%; background: var(--bg-surface); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; border: 2px solid var(--accent); font-size: 2rem; color: var(--accent);">АН</div>
+                <div class="author-name">Андрей Носар</div>
+                <div class="author-role">Ведущий инженер-технолог УЭЦН</div>
+                <p class="author-bio" style="margin-top: 0.5rem;">
+                    25 лет в нефтедобыче. От ремонта гидрозащиты до руководства технологической службой.
+                    Создаю инструменты, которые экономят часы работы технолога.
+                </p>
+            </div>
+
+            <div class="sidebar-block">
+                <h3>Ключевые компетенции</h3>
+                <ul class="expertise-list">
+                    <li>Подбор и оптимизация УЭЦН</li>
+                    <li>Подбор и настройка режимов работы УЭЦН: ПИД-регулирование, АПВ, ПКВ, поддержание загрузки, тока, давления на приёме, режим встряхивания</li>
+                    <li>Анализ механизированного фонда</li>
+                    <li>Руководство технологической службой</li>
+                    <li>Разработка мероприятий по увеличению наработки</li>
+                    <li>Работа с заказчиком, защита позиции</li>
+                    <li>Автоматизация инженерных расчётов</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-block">
+                <h3>Образование</h3>
+                <ul class="expertise-list">
+                    <li>Московский технологический институт, MBA (2018)</li>
+                    <li>ТУСУР, менеджмент нефтегазовой отрасли (2007)</li>
+                    <li>Ноябрьский нефтегазовый колледж, техник (2005)</li>
+                    <li>Проф. переподготовка: разработка и эксплуатация НГМ (2024)</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-block">
+                <h3>Контакты</h3>
+                <div class="contact-list">
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                        </svg>
+                        <a href="mailto:nosar.andrey@gmail.com">nosar.andrey@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <a href="tel:+79124271780">+7 (912) 427-17-80</a>
+                    </div>
+                </div>
+                <div style="margin-top: 1rem;">
+                    <a href="resume.html" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.85rem;">Скачать резюме (PDF)</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- ===== EXPERIENCE TIMELINE ===== -->
+    <section id="experience" class="ai-section" style="margin-bottom: 4rem;">
+        <div class="ai-subheading-group">
+            <h3 class="ai-subheading-title">Опыт работы</h3>
+            <p class="ai-subheading-desc">25 лет в нефтедобыче: от ремонта гидрозащиты до руководства технологической службой</p>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item" onclick="toggleDetails(this)">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-period">Январь 2025 — настоящее время</div>
+                        <div class="timeline-role">Ведущий инженер-технолог</div>
+                    </div>
+                    <div class="timeline-company">Новые Технологии, Нефтеюганск</div>
+                </div>
+                <div class="timeline-details">
+                    <ul>
+                        <li>Ведение единой сводной суточной отчётности по пяти производственным проектам: монтажи, демонтажи, запуски, отказы УЭЦН, движение резерва и дополнительного оборудования</li>
+                        <li>Актуализация накопительной информации в ежедневном режиме, сведение данных от различных служб в один оперативный отчёт</li>
+                        <li>Мониторинг работы погружного оборудования и станций управления, анализ отклонений и подготовка мероприятий по оптимизации</li>
+                        <li>Ведение технической документации и отчётности по фонду скважин</li>
+                        <li>Взаимодействие с заказчиком по техническим вопросам эксплуатации УЭЦН</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleDetails(this)">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-period">Июнь 2024 — настоящее время</div>
+                        <div class="timeline-role">Инженер-технолог 1-й категории</div>
+                    </div>
+                    <div class="timeline-company">Сургутнефтегаз, Сургут</div>
+                </div>
+                <div class="timeline-details">
+                    <ul>
+                        <li>Мониторинг и оптимизация механизированного фонда УЭЦН</li>
+                        <li>Технологические расчёты, вывод скважин на режим после ремонтов</li>
+                        <li>Анализ отказов, участие в комиссионных разборах</li>
+                        <li>Разработка мероприятий по увеличению наработки на отказ</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleDetails(this)">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-period">Март 2022 — Июнь 2024</div>
+                        <div class="timeline-role">Заместитель начальника технологической службы</div>
+                    </div>
+                    <div class="timeline-company">ПАО НК «Руснефть», Ханты-Мансийск</div>
+                </div>
+                <div class="timeline-details">
+                    <ul>
+                        <li>Руководил службой, планировал и контролировал выполнение задач по мониторингу и оптимизации механизированного фонда</li>
+                        <li>Организовывал и лично участвовал в подборе и настройке режимов работы УЭЦН: ПИД-регулирование, АПВ, ПКВ, поддержание загрузки, тока, давления на приёме, режим встряхивания</li>
+                        <li>Проводил анализ эксплуатационных параметров, выявлял отклонения и разрабатывал мероприятия по стабилизации работы скважин</li>
+                        <li>Готовил рекомендации по корректировке режимов, вёл аналитическую отчётность и защищал предложения перед руководством</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleDetails(this)">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-period">Апрель 2017 — Март 2022</div>
+                        <div class="timeline-role">Инженер-технолог отдела по работе с механизированным фондом</div>
+                    </div>
+                    <div class="timeline-company">Новомет, Пермь</div>
+                </div>
+                <div class="timeline-details">
+                    <ul>
+                        <li>Выполнял мониторинг и анализ работы механизированного фонда, выявлял отклонения от оптимальных параметров</li>
+                        <li>Осуществлял подбор и настройку режимов эксплуатации УЭЦН: ПИД-регулирование, АПВ, ПКВ, контроль загрузки и тока, режим встряхивания</li>
+                        <li>Разрабатывал рекомендации по корректировке режимов и мероприятия по повышению эффективности работы скважин</li>
+                        <li>Контролировал работу наземного оборудования, участвовал в анализе отказов и подготовке технических заключений</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleDetails(this)">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-period">Февраль 2011 — Апрель 2017</div>
+                        <div class="timeline-role">Инженер-технолог</div>
+                    </div>
+                    <div class="timeline-company">ООО «Новомет Сервис Нефтеюганск»</div>
+                </div>
+                <div class="timeline-details">
+                    <ul>
+                        <li>Аналогичные задачи: мониторинг фонда, анализ, рекомендации</li>
+                        <li>Работа с УЭЦН отечественного и импортного производства</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleDetails(this)">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-period">Октябрь 2010 — Февраль 2011</div>
+                        <div class="timeline-role">Ведущий технолог ОРМФ (13 грейд)</div>
+                    </div>
+                    <div class="timeline-company">ООО «Газпромнефть»</div>
+                </div>
+                <div class="timeline-details">
+                    <ul>
+                        <li>Проводил технологические расчёты и подбор режимов работы УЭЦН (ПИД, АПВ, ПКВ, защитные алгоритмы) для различных условий эксплуатации</li>
+                        <li>Вёл оперативный контроль механизированного фонда, анализировал внутрисменные простои и разрабатывал меры по их снижению</li>
+                        <li>Готовил рекомендации по корректировке режимов и мероприятия по увеличению наработки на отказ</li>
+                        <li>Участвовал в комиссионных разборах отказов, контролировал работу подрядных организаций</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleDetails(this)">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-period">Июнь 2007 — Октябрь 2010</div>
+                        <div class="timeline-role">Инженер-технолог отдела оценки потенциала оборудования</div>
+                    </div>
+                    <div class="timeline-company">ООО «Газпромнефть»</div>
+                </div>
+                <div class="timeline-details">
+                    <ul>
+                        <li>Контроль движения оборудования, комплектация</li>
+                        <li>Технологические расчёты, работа с СУ</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleDetails(this)">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-period">Апрель 2006 — Июнь 2007</div>
+                        <div class="timeline-role">И.О. мастера цеха ремонта</div>
+                    </div>
+                    <div class="timeline-company">ООО «Новомет Сервис Ноябрьск»</div>
+                </div>
+                <div class="timeline-details">
+                    <ul>
+                        <li>Контроль сборки/разборки УЭЦН, ведение документации</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleDetails(this)">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-period">Октябрь 2000 — Декабрь 2005</div>
+                        <div class="timeline-role">Специалист по ремонту гидрозащиты</div>
+                    </div>
+                    <div class="timeline-company">ООО «Ноябрьск ЭПУ Сервис»</div>
+                </div>
+                <div class="timeline-details">
+                    <ul>
+                        <li>Ремонт и обслуживание гидрозащиты, входной контроль</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ESP AI ANALYZER (перемещено в конец) ===== -->
+    <section class="ai-section" id="esp-ai-analyzer" aria-labelledby="ai-hero-title">
+        <div class="ai-hero-card">
+            <div class="ai-hero-grid">
+                <div>
+                    <div class="ai-badge-group">
+                        <span class="ai-badge"><span class="ai-badge-pulse"></span>ESP AI AGENT · NEXT GEN</span>
+                        <span class="status-badge" style="background: rgba(148, 163, 184, 0.08); border-color: var(--border); color: var(--text-secondary);">Телеметрия УЭЦН</span>
+                    </div>
+                    <h2 id="ai-hero-title" class="ai-hero-title">ESP AI <span>ANALYZER</span></h2>
+                    <div class="ai-hero-subtitle">Интеллектуальный анализ фонда УЭЦН с автоматическим выявлением отклонений и формированием инженерных рекомендаций</div>
+                    <p class="ai-hero-desc">
+                        Система анализирует данные станций управления, сравнивает фактические параметры с заданными требованиями и помогает технологам быстрее выявлять проблемы эксплуатации.
+                    </p>
+                    <div class="ai-hero-actions">
+                        <a href="#ai-features" class="project-link">Подробнее о модуле</a>
+                        <span class="btn-status-outline">⚡ Проект в разработке</span>
+                    </div>
+                </div>
+
+                <div class="ai-mockup-frame" onclick="openLightbox('image.png', 'ESP AI ANALYZER — Диагностический дашборд скважины №214')" role="button" tabindex="0" title="Нажмите для увеличения">
+                    <div class="ai-mockup-bar">
+                        <div class="ai-mockup-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <span class="ai-mockup-tag">ESP_AI_v2.4 :: Telemetry_Stream</span>
+                        <span style="font-size: 0.7rem; color: var(--accent);">🔍 Zoom</span>
+                    </div>
+                    <div class="ai-mockup-img-wrap">
+                        <img src="image.png" alt="Интерфейс AI-анализатора параметров УЭЦН" class="ai-mockup-img" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-subheading-group">
+            <h3 class="ai-subheading-title">Как работает система</h3>
+            <p class="ai-subheading-desc">Автоматизированный сквозной цикл от сырой телеметрии до готовых решений</p>
+        </div>
+
+        <div class="ai-timeline-grid">
+            <div class="ai-timeline-item">
+                <div class="ai-timeline-header">
+                    <span class="ai-step-num">01</span>
+                    <svg class="ai-step-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                    </svg>
+                </div>
+                <div class="ai-step-title">Импорт данных</div>
+                <p class="ai-step-desc">Загрузка параметров со станции управления УЭЦН в различных форматах выгрузок.</p>
+            </div>
+
+            <div class="ai-timeline-item">
+                <div class="ai-timeline-header">
+                    <span class="ai-step-num">02</span>
+                    <svg class="ai-step-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <div class="ai-step-title">AI-анализ</div>
+                <p class="ai-step-desc">Обработка данных и выявление закономерностей, скрытых трендов и аномальных режимов.</p>
+            </div>
+
+            <div class="ai-timeline-item">
+                <div class="ai-timeline-header">
+                    <span class="ai-step-num">03</span>
+                    <svg class="ai-step-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                </div>
+                <div class="ai-step-title">Контроль параметров</div>
+                <p class="ai-step-desc">Сравнение фактических значений с требованиями заказчика и утверждённой картой уставок.</p>
+            </div>
+
+            <div class="ai-timeline-item">
+                <div class="ai-timeline-header">
+                    <span class="ai-step-num">04</span>
+                    <svg class="ai-step-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                </div>
+                <div class="ai-step-title">Аналитический отчёт</div>
+                <p class="ai-step-desc">Формирование структурированного результата с рекомендациями для инженера-технолога.</p>
+            </div>
+        </div>
+
+        <div id="ai-features" class="ai-subheading-group">
+            <h3 class="ai-subheading-title">Возможности ESP AI ANALYZER</h3>
+            <p class="ai-subheading-desc">Интеллектуальная помощь инженеру-технологу в поиске проблемных объектов</p>
+        </div>
+
+        <div class="ai-features-grid">
+            <div class="ai-feature-card">
+                <div class="ai-feature-icon-box">
+                    <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V7c0-2-1-3-3-3H7C5 4 4 5 4 7zM9 9h6M9 13h6M9 17h4" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="ai-feature-title">AI-анализ фонда</div>
+                    <p class="ai-feature-desc">Автоматическая оценка состояния большого количества скважин и ранжирование объектов по уровню риска.</p>
+                </div>
+            </div>
+
+            <div class="ai-feature-card">
+                <div class="ai-feature-icon-box">
+                    <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="ai-feature-title">Диагностика УЭЦН</div>
+                    <p class="ai-feature-desc">Выявление нестандартных режимов работы оборудования на основе комплексного анализа технологических параметров.</p>
+                </div>
+            </div>
+
+            <div class="ai-feature-card">
+                <div class="ai-feature-icon-box">
+                    <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="ai-feature-title">Контроль уставок</div>
+                    <p class="ai-feature-desc">Автоматическое сравнение требований заказчика, карты уставок и фактических настроек станции управления.</p>
+                </div>
+            </div>
+
+            <div class="ai-feature-card">
+                <div class="ai-feature-icon-box">
+                    <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="ai-feature-title">Инженерные отчёты</div>
+                    <p class="ai-feature-desc">Формирование структурированной аналитики с выявленными отклонениями и готовыми рекомендациями.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-subheading-group">
+            <h3 class="ai-subheading-title">Интерфейс системы</h3>
+            <p class="ai-subheading-desc">Нажмите на карточку для просмотра интерфейса в высоком разрешении</p>
+        </div>
+
+        <div class="ai-gallery-grid">
+            <div class="ai-gallery-card" onclick="openLightbox('image_3.png', 'Экран 1: Dashboard фонда — Контроль состояния всего фонда')" role="button" tabindex="0">
+                <div class="ai-gallery-thumb">
+                    <img src="image_3.png" alt="Dashboard фонда УЭЦН" loading="lazy" />
+                    <div class="ai-gallery-overlay-hint">
+                        <span>Увеличить скриншот ↗</span>
+                    </div>
+                </div>
+                <div class="ai-gallery-info">
+                    <div class="ai-gallery-title">Dashboard фонда</div>
+                    <div class="ai-gallery-caption">Контроль состояния всего фонда</div>
+                </div>
+            </div>
+
+            <div class="ai-gallery-card" onclick="openLightbox('image.png', 'Экран 2: Анализ скважины — Поиск причин отклонений')" role="button" tabindex="0">
+                <div class="ai-gallery-thumb">
+                    <img src="image.png" alt="Анализ параметров скважины УЭЦН" loading="lazy" />
+                    <div class="ai-gallery-overlay-hint">
+                        <span>Увеличить скриншот ↗</span>
+                    </div>
+                </div>
+                <div class="ai-gallery-info">
+                    <div class="ai-gallery-title">Анализ скважины</div>
+                    <div class="ai-gallery-caption">Поиск причин отклонений</div>
+                </div>
+            </div>
+
+            <div class="ai-gallery-card" onclick="openLightbox('image_2.png', 'Экран 3: Проверка уставок — Контроль соответствия параметров')" role="button" tabindex="0">
+                <div class="ai-gallery-thumb">
+                    <img src="image_2.png" alt="Проверка уставок и сопоставление данных" loading="lazy" />
+                    <div class="ai-gallery-overlay-hint">
+                        <span>Увеличить скриншот ↗</span>
+                    </div>
+                </div>
+                <div class="ai-gallery-info">
+                    <div class="ai-gallery-title">Проверка уставок</div>
+                    <div class="ai-gallery-caption">Контроль соответствия параметров</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-stats-bar">
+            <div class="ai-stat-unit">
+                <div class="ai-stat-number">30+</div>
+                <div class="ai-stat-label">параметров анализируются автоматически</div>
+            </div>
+            <div class="ai-stat-unit">
+                <div class="ai-stat-number">до 200</div>
+                <div class="ai-stat-label">скважин обрабатываются за один проход</div>
+            </div>
+            <div class="ai-stat-unit">
+                <div class="ai-stat-number">2 мин</div>
+                <div class="ai-stat-label">на отчёт по скважине с рекомендациями</div>
+            </div>
+            <div class="ai-stat-unit">
+                <div class="ai-stat-number">1 клик</div>
+                <div class="ai-stat-label">до приоритетного списка проблемных объектов</div>
+            </div>
+        </div>
+
+        <div class="ai-cta-card">
+            <div class="ai-cta-title">ESP AI ANALYZER находится в стадии разработки</div>
+            <p class="ai-cta-desc">
+                Новый инструмент позволит сократить время анализа фонда УЭЦН и повысить эффективность инженерных решений.
+            </p>
+            <!-- Кнопки удалены по просьбе пользователя -->
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <span>© 2026 Андрей Носар · +7 (912) 427-17-80</span>
+        <div class="footer-links">
+            <a href="mailto:nosar.andrey@gmail.com">Email</a>
+            <a href="tel:+79124271780">Телефон</a>
+            <a href="resume.html">Скачать резюме</a>
+            <!-- Ссылка на GitHub удалена -->
+        </div>
+    </footer>
+</div>
+
+<!-- ===== MODALS ===== -->
+<div id="modal-lightbox" class="modal-overlay ai-lightbox-modal" role="dialog" aria-modal="true" aria-labelledby="modal-lightbox-title">
+    <div class="modal">
+        <div class="modal-header">
+            <h2 id="modal-lightbox-title" class="modal-title" style="font-size: 1.05rem;">Просмотр интерфейса</h2>
+            <button class="modal-close" aria-label="Закрыть окно">&times;</button>
+        </div>
+        <div class="ai-lightbox-body">
+            <img id="lightbox-target-img" src="" alt="Увеличенный скриншот" class="ai-lightbox-img" />
+        </div>
+    </div>
+</div>
+
+<div id="modal-esp" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-esp-title">
+    <div class="modal">
+        <div class="modal-header">
+            <h2 id="modal-esp-title" class="modal-title">ESP Selector</h2>
+            <button class="modal-close" aria-label="Закрыть окно">&times;</button>
+        </div>
+        <div class="tabs" role="tablist">
+            <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-esp-overview">Обзор</button>
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-esp-instruction" tabindex="-1">Инструкция</button>
+        </div>
+        <div class="tab-panel active" id="tab-esp-overview" role="tabpanel">
+            <div class="modal-body">
+                <p class="modal-desc">Инструмент моделирует полную физику процесса подбора установки электроцентробежного насоса. Учитывает законы подобия, поправку на вязкость, энергетический баланс и тепловую совместимость.</p>
+                <ul class="modal-features">
+                    <li>Автоматический подбор насоса, ПЭД, гидрозащиты и газосепаратора</li>
+                    <li>Интерактивные графики напора, мощности и КПД</li>
+                    <li>Цветовые индикаторы состояния: норма, граница, риск</li>
+                    <li>Экспорт графиков в PNG для технических отчётов</li>
+                    <li>Сравнение до 3 вариантов установок одновременно</li>
+                    <li>Встроенная база характеристик насосов и двигателей</li>
+                </ul>
+                <div class="modal-actions">
+                    <a href="https://tehnologdeveng.github.io/engineering-module-for-selecting-esp/" target="_blank" rel="noopener noreferrer" class="project-link">Открыть инструмент</a>
+                    <button class="btn-secondary modal-close-btn">Закрыть</button>
+                </div>
+            </div>
+        </div>
+        <div class="tab-panel" id="tab-esp-instruction" role="tabpanel">
+            <div class="instruction-content">
+                <h3>Краткое руководство пользователя (v8.6.1)</h3>
+                <h4>1. Назначение программы</h4>
+                <p>ESP Selector — инженерный онлайн-калькулятор для подбора установок электрических центробежных насосов (УЭЦН) к нефтяным скважинам.</p>
+                <h4>2. Основные входные данные</h4>
+                <ul>
+                    <li><strong>Дебит жидкости (Q)</strong> — целевой объём жидкости на устье, м³/сут.</li>
+                    <li><strong>Требуемый напор (H)</strong> — суммарный напор.</li>
+                    <li><strong>Диаметр обсадной колонны</strong> — габарит насоса.</li>
+                    <li><strong>Плотность и вязкость</strong> — гидродинамические поправки.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-calc" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-calc-title">
+    <div class="modal">
+        <div class="modal-header">
+            <h2 id="modal-calc-title" class="modal-title">Инженерный калькулятор УЭЦН</h2>
+            <button class="modal-close" aria-label="Закрыть окно">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p class="modal-desc">12 расчётных модулей, закрывающих ежедневные задачи технолога: от определения давления на приёме до подбора отпайки ТМПН и расчёта потерь в кабеле.</p>
+            <ul class="modal-features">
+                <li>АПВ / ПКВ, коэффициент продуктивности</li>
+                <li>Давление на приёме насоса</li>
+                <li>Потери напряжения в кабеле</li>
+                <li>Подбор отпайки ТМПН</li>
+                <li>Частотное регулирование</li>
+                <li>Выгрузка результатов в PDF и Excel</li>
+            </ul>
+            <div class="modal-actions">
+                <a href="https://tehnologdeveng.github.io/engineering-calculator/" target="_blank" rel="noopener noreferrer" class="project-link">Открыть калькулятор</a>
+                <button class="btn-secondary modal-close-btn">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-tmpn" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-tmpn-title">
+    <div class="modal">
+        <div class="modal-header">
+            <h2 id="modal-tmpn-title" class="modal-title">Подбор СУ · ТМПН · Отпайка</h2>
+            <button class="modal-close" aria-label="Закрыть окно">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p class="modal-desc">Профессиональный модуль для подбора станции управления и трансформатора. Автоматически рассчитывает все четыре ступени отпаек и ранжирует топ-3 модели СУ из встроенного каталога.</p>
+            <ul class="modal-features">
+                <li>Расчёт напряжения на всех ступенях отпаек ТМПН</li>
+                <li>Ранжирование топ-3 станций управления по току и мощности</li>
+                <li>База из 40+ моделей СУ</li>
+                <li>Экспорт результатов в PDF</li>
+            </ul>
+            <div class="modal-actions">
+                <a href="https://tehnologdeveng.github.io/Transformer-Oil-filled-for-Submersible-Pumps/" target="_blank" rel="noopener noreferrer" class="project-link">Открыть модуль</a>
+                <button class="btn-secondary modal-close-btn">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+(function() {
+    const cards = document.querySelectorAll('.project[data-modal]');
+    const overlays = document.querySelectorAll('.modal-overlay');
+    let lastActiveElement = null;
+
+    function openModal(overlay) {
+        if (!overlay) return;
+        lastActiveElement = document.activeElement;
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        const focusable = overlay.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        if (focusable.length) {
+            const closeBtn = overlay.querySelector('.modal-close');
+            if (closeBtn) closeBtn.focus();
+        }
+        trapFocus(overlay);
+    }
+
+    function closeModal(overlay) {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+        if (lastActiveElement) lastActiveElement.focus();
+        lastActiveElement = null;
+    }
+
+    function trapFocus(overlay) {
+        overlay.addEventListener('keydown', function(e) {
+            if (e.key === 'Tab') {
+                const focusable = overlay.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+                const first = focusable[0];
+                const last = focusable[focusable.length - 1];
+                if (e.shiftKey && document.activeElement === first) {
+                    e.preventDefault();
+                    last.focus();
+                } else if (!e.shiftKey && document.activeElement === last) {
+                    e.preventDefault();
+                    first.focus();
+                }
+            }
+        });
+    }
+
+    window.openLightbox = function(src, title) {
+        const modal = document.getElementById('modal-lightbox');
+        const img = document.getElementById('lightbox-target-img');
+        const titleElem = document.getElementById('modal-lightbox-title');
+        
+        if (modal && img) {
+            img.src = src;
+            if (title && titleElem) titleElem.textContent = title;
+            openModal(modal);
+        }
+    };
+
+    cards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            if (e.target.closest('a, button')) return;
+            const modalId = this.getAttribute('data-modal');
+            openModal(document.getElementById(modalId));
+        });
+        card.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                const modalId = this.getAttribute('data-modal');
+                openModal(document.getElementById(modalId));
+            }
+        });
+    });
+
+    overlays.forEach(overlay => {
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) closeModal(overlay);
+        });
+        const closeBtns = overlay.querySelectorAll('.modal-close, .modal-close-btn');
+        closeBtns.forEach(btn => {
+            btn.addEventListener('click', () => closeModal(overlay));
+        });
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            overlays.forEach(overlay => {
+                if (overlay.classList.contains('active')) closeModal(overlay);
+            });
+        }
+    });
+
+    document.querySelectorAll('.modal').forEach(modal => {
+        const tabBtns = modal.querySelectorAll('.tab-btn');
+        const tabPanels = modal.querySelectorAll('.tab-panel');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.getAttribute('aria-controls');
+                const targetPanel = modal.querySelector('#' + targetId);
+
+                tabBtns.forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-selected', 'false');
+                    b.setAttribute('tabindex', '-1');
+                });
+                tabPanels.forEach(p => p.classList.remove('active'));
+
+                btn.classList.add('active');
+                btn.setAttribute('aria-selected', 'true');
+                btn.setAttribute('tabindex', '0');
+                if (targetPanel) targetPanel.classList.add('active');
+            });
+        });
+    });
+
+    // Toggle timeline details
+    window.toggleDetails = function(item) {
+        item.classList.toggle('active');
+    };
+})();
+</script>
+
+</body>
+</html>
