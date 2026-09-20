@@ -28,7 +28,7 @@ export function About({ data }: AboutProps) {
           <div className="grid sm:grid-cols-2 gap-4 print:gap-2">
             {data.competencies.map((comp, idx) => (
               <div key={idx} className="flex items-start gap-3 print:gap-2">
-                <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5 print:w-3.5 print:h-3.5" />
+                <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5 print:w-3.5 print:h-3.5 print:text-[#059669]" />
                 <span className="text-sm text-text-secondary leading-tight print:text-xs">{comp}</span>
               </div>
             ))}

@@ -23,11 +23,11 @@ export default function App() {
         <Projects data={portfolioData} />
         <Experience data={portfolioData} />
         
-        <footer className="py-8 border-t border-border mt-12 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-text-muted print:mt-6 print:py-4 print:text-xs">
-          <p>© {new Date().getFullYear()} {portfolioData.name}. Резюме и портфолио инженера.</p>
+        <footer className="py-8 border-t border-border mt-12 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-text-muted print:mt-4 print:py-2.5 print:text-[10px] print:border-[#CBD5E1] print:text-[#64748B]">
+          <p>© {new Date().getFullYear()} {portfolioData.name}. Резюме и портфолио инженера УЭЦН.</p>
           <div className="flex gap-6">
-            <span className="text-text-secondary">{portfolioData.email}</span>
-            <span className="text-text-secondary">{portfolioData.phone}</span>
+            <span className="text-text-secondary print:text-[#334155]">{portfolioData.email}</span>
+            <span className="text-text-secondary print:text-[#334155]">{portfolioData.phone}</span>
           </div>
         </footer>
       </div>

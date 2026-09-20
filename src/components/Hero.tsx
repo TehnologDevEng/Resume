@@ -69,22 +69,22 @@ export function Hero({ data }: HeroProps) {
         </a>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-10 border-t border-border print:mt-4 print:pt-4 print:gap-2">
-        <div className="print:bg-surface/50 print:p-2 print:rounded-lg print:border print:border-border">
-          <div className="text-3xl font-bold text-text-primary mb-1 print:text-xl">{data.experienceYears}+</div>
-          <div className="text-sm text-text-muted print:text-[11px]">Лет опыта в нефтедобыче</div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-10 border-t border-border print:mt-4 print:pt-4 print:gap-3">
+        <div className="print:bg-[#F8FAFC] print:p-3 print:rounded-lg print:border print:border-[#CBD5E1]">
+          <div className="text-3xl font-bold text-text-primary mb-1 print:text-xl print:text-primary">{data.experienceYears}+</div>
+          <div className="text-sm text-text-muted print:text-[11px] print:text-[#475569]">Лет опыта в нефтедобыче</div>
         </div>
-        <div className="print:bg-surface/50 print:p-2 print:rounded-lg print:border print:border-border">
-          <div className="text-3xl font-bold text-text-primary mb-1 print:text-xl">{data.productsCount}</div>
-          <div className="text-sm text-text-muted print:text-[11px]">Инженерных продукта</div>
+        <div className="print:bg-[#F8FAFC] print:p-3 print:rounded-lg print:border print:border-[#CBD5E1]">
+          <div className="text-3xl font-bold text-text-primary mb-1 print:text-xl print:text-primary">{data.productsCount}</div>
+          <div className="text-sm text-text-muted print:text-[11px] print:text-[#475569]">Инженерных продукта</div>
         </div>
-        <div className="print:bg-surface/50 print:p-2 print:rounded-lg print:border print:border-border">
-          <div className="text-3xl font-bold text-text-primary mb-1 print:text-xl">12</div>
-          <div className="text-sm text-text-muted print:text-[11px]">Расчётных модулей</div>
+        <div className="print:bg-[#F8FAFC] print:p-3 print:rounded-lg print:border print:border-[#CBD5E1]">
+          <div className="text-3xl font-bold text-text-primary mb-1 print:text-xl print:text-primary">12</div>
+          <div className="text-sm text-text-muted print:text-[11px] print:text-[#475569]">Расчётных модулей</div>
         </div>
-        <div className="print:bg-surface/50 print:p-2 print:rounded-lg print:border print:border-border">
-          <div className="text-3xl font-bold text-text-primary mb-1 print:text-xl">60+</div>
-          <div className="text-sm text-text-muted print:text-[11px]">Моделей насосов в каталоге</div>
+        <div className="print:bg-[#F8FAFC] print:p-3 print:rounded-lg print:border print:border-[#CBD5E1]">
+          <div className="text-3xl font-bold text-text-primary mb-1 print:text-xl print:text-primary">60+</div>
+          <div className="text-sm text-text-muted print:text-[11px] print:text-[#475569]">Моделей насосов в каталоге</div>
         </div>
       </div>
     </motion.section>
