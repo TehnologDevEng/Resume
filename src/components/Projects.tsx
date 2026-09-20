@@ -49,7 +49,7 @@ export function Projects({ data }: ProjectsProps) {
                 <h4 className="text-2xl font-bold text-text-primary mb-2 group-hover:text-primary transition-colors print:text-base print:mb-0.5 print:text-[#0F172A]">
                   {proj.title}
                 </h4>
-                <p className="text-sm text-primary mb-4 font-medium print:text-xs print:mb-1.5 print:text-primary">{proj.subtitle}</p>
+                <p className="text-sm text-primary mb-4 font-medium print:text-xs print:mb-1.5 print:text-[#1D4ED8]">{proj.subtitle}</p>
                 
                 <p className="text-text-secondary text-sm mb-6 leading-relaxed print:text-[11px] print:mb-2.5 print:leading-snug print:text-[#334155]">
                   {proj.description}
@@ -68,7 +68,7 @@ export function Projects({ data }: ProjectsProps) {
                 <div className="text-[10px] font-bold text-[#64748B] uppercase tracking-wider hidden print:block mb-1">Функционал и возможности:</div>
                 {proj.features.map((feature, i) => (
                   <div key={i} className="flex items-start gap-2 text-sm text-text-secondary print:text-[10.5px] print:gap-1.5 print:text-[#334155]">
-                    <Activity className="w-4 h-4 text-primary shrink-0 mt-0.5 print:w-3 print:h-3 print:text-primary" />
+                    <Activity className="w-4 h-4 text-primary shrink-0 mt-0.5 print:w-3 print:h-3 print:text-[#1D4ED8]" />
                     <span>{feature}</span>
                   </div>
                 ))}

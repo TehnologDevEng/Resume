@@ -11,7 +11,7 @@ import { Projects } from "./components/Projects";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden text-text-primary selection:bg-primary/30 print:bg-background print:overflow-visible print:min-h-0">
+    <div className="min-h-screen bg-background relative overflow-hidden text-text-primary selection:bg-primary/30 print:bg-white print:text-slate-900 print:overflow-visible print:min-h-0">
       
       {/* Background glowing effects - hidden on print */}
       <div className="ambient-glow fixed top-[-20%] left-[-10%] w-[50%] h-[50%] bg-primary/5 rounded-full blur-[120px] pointer-events-none print:hidden" />

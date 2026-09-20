@@ -40,11 +40,11 @@ export function Experience({ data }: ExperienceProps) {
                     <h4 className="text-lg font-bold text-text-primary group-hover:text-primary transition-colors print:text-sm print:text-[#0F172A]">
                       {exp.role}
                     </h4>
-                    <div className="text-sm text-primary mb-3 print:text-xs print:mb-2 print:text-primary">{exp.company} • {exp.location}</div>
+                    <div className="text-sm text-primary mb-3 print:text-xs print:mb-2 print:text-[#1D4ED8]">{exp.company} • {exp.location}</div>
                     <ul className="space-y-2 print:space-y-1">
                       {exp.responsibilities.map((resp, i) => (
                         <li key={i} className="text-sm text-text-secondary flex items-start gap-2 print:text-xs print:text-[#334155]">
-                          <span className="w-1.5 h-1.5 rounded-full bg-primary/40 mt-1.5 shrink-0 print:w-1 print:h-1 print:bg-primary" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary/40 mt-1.5 shrink-0 print:w-1 print:h-1 print:bg-[#1D4ED8]" />
                           <span>{resp}</span>
                         </li>
                       ))}

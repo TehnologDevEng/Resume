@@ -36,7 +36,7 @@
 }
 
 @media print {
-  * {
+  *, *::before, *::after {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
     color-adjust: exact !important;
@@ -44,22 +44,23 @@
     text-shadow: none !important;
   }
 
-  html, body {
+  html, body, #root, #root > div, .min-h-screen, .bg-background {
     background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
     color: #0F172A !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
     margin: 0 !important;
     padding: 0 !important;
-    font-size: 11pt !important;
-    line-height: 1.4 !important;
+    font-size: 10pt !important;
+    line-height: 1.35 !important;
   }
 
-  /* Main dark text for maximum readability */
-  h1, h2, h3, h4, .text-text-primary {
+  /* Headings in deep dark contrast */
+  h1, h2, h3, h4, h5, h6, .text-text-primary {
     color: #0F172A !important;
   }
 
-  .text-text-secondary {
+  /* Paragraphs and secondary text in clear graphite */
+  p, span, li, .text-text-secondary {
     color: #334155 !important;
   }
 
@@ -67,18 +68,19 @@
     color: #64748B !important;
   }
 
-  /* Colored accents where appropriate */
+  /* Accent colors */
   .text-primary {
-    color: #1D4ED8 !important; /* Rich professional blue */
+    color: #1D4ED8 !important; /* Rich professional royal blue */
   }
 
   .text-success {
-    color: #047857 !important; /* Professional emerald green */
+    color: #047857 !important; /* Deep emerald green */
   }
 
-  /* Clean light cards with crisp borders */
-  .glass-card {
+  /* Cards on crisp white paper */
+  .glass-card, .bg-surface, .bg-surface-hover, .bg-surface-hover\/50 {
     background-color: #F8FAFC !important;
+    background: #F8FAFC !important;
     border: 1px solid #CBD5E1 !important;
     border-radius: 8px !important;
     break-inside: avoid !important;
@@ -86,18 +88,10 @@
   }
 
   .border-border {
-    border-color: #E2E8F0 !important;
+    border-color: #CBD5E1 !important;
   }
 
-  .bg-surface {
-    background-color: #F8FAFC !important;
-  }
-
-  .bg-surface-hover, .bg-surface-hover\/50 {
-    background-color: #F1F5F9 !important;
-  }
-
-  /* Colored badges and pills */
+  /* Badges & tags in print */
   .bg-primary\/10, .bg-primary\/20 {
     background-color: #EFF6FF !important;
     color: #1D4ED8 !important;
@@ -110,7 +104,7 @@
     border: 1px solid #A7F3D0 !important;
   }
 
-  /* Prevent page overflows and control 3-page layout */
+  /* 3-page strict layout controllers */
   .print-page-break {
     page-break-before: always !important;
     break-before: page !important;
@@ -121,7 +115,7 @@
     page-break-inside: avoid !important;
   }
 
-  /* Hide interactive web-only elements */
+  /* Hide web-only controls */
   button, .no-print, .ambient-glow {
     display: none !important;
   }

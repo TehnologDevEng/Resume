@@ -17,19 +17,19 @@ export function About({ data }: AboutProps) {
     >
       <div className="grid md:grid-cols-[1fr_2fr] gap-12 print:grid-cols-[1fr_1.8fr] print:gap-6">
         <div>
-          <h3 className="text-2xl font-bold mb-4 print:text-lg print:mb-2 text-text-primary">Обо мне</h3>
-          <p className="text-text-secondary leading-relaxed print:text-xs print:leading-normal">
+          <h3 className="text-2xl font-bold mb-4 print:text-lg print:mb-2 text-text-primary print:text-[#0F172A]">Обо мне</h3>
+          <p className="text-text-secondary leading-relaxed print:text-xs print:leading-normal print:text-[#334155]">
             {data.about}
           </p>
         </div>
         
-        <div className="glass-card p-8 print:p-4 print:break-inside-avoid">
-          <h4 className="text-lg font-bold mb-6 text-text-primary print:text-sm print:mb-3">Ключевые компетенции</h4>
+        <div className="glass-card p-8 print:p-4 print:break-inside-avoid print:bg-[#F8FAFC] print:border print:border-[#CBD5E1]">
+          <h4 className="text-lg font-bold mb-6 text-text-primary print:text-sm print:mb-3 print:text-[#0F172A]">Ключевые компетенции</h4>
           <div className="grid sm:grid-cols-2 gap-4 print:gap-2">
             {data.competencies.map((comp, idx) => (
               <div key={idx} className="flex items-start gap-3 print:gap-2">
-                <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5 print:w-3.5 print:h-3.5 print:text-[#059669]" />
-                <span className="text-sm text-text-secondary leading-tight print:text-xs">{comp}</span>
+                <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5 print:w-3.5 print:h-3.5 print:text-[#047857]" />
+                <span className="text-sm text-text-secondary leading-tight print:text-xs print:text-[#334155]">{comp}</span>
               </div>
             ))}
           </div>
