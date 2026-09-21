@@ -55,27 +55,30 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  .print-page {
-    width: 100% !important;
-    height: 260mm !important;
-    max-height: 260mm !important;
-    page-break-inside: avoid !important;
-    break-inside: avoid !important;
-    overflow: hidden !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    box-sizing: border-box !important;
-  }
-
-  .print-page:not(:last-child) {
+  /* Page containers: natural compact height with strict page break */
+  .print-page-1 {
+    page-break-before: avoid !important;
+    break-before: avoid !important;
     page-break-after: always !important;
     break-after: page !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    padding-bottom: 4mm !important;
   }
 
-  .print-page:last-child {
+  .print-page-2 {
+    page-break-before: always !important;
+    break-before: page !important;
     page-break-after: avoid !important;
     break-after: avoid !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    padding-bottom: 4mm !important;
+  }
+
+  .avoid-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
   }
 
   .avoid-break {
